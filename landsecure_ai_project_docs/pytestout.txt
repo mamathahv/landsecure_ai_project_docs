@@ -1,0 +1,38 @@
+........                                                                 [100%]
+============================== warnings summary ===============================
+venv\Lib\site-packages\starlette\formparsers.py:12
+  C:\Users\Manikanta\Desktop\landsecure_ai_project_docs\backend\venv\Lib\site-packages\starlette\formparsers.py:12: PendingDeprecationWarning: Please use `import python_multipart` instead.
+    import multipart
+
+venv\Lib\site-packages\starlette\testclient.py:41
+  C:\Users\Manikanta\Desktop\landsecure_ai_project_docs\backend\venv\Lib\site-packages\starlette\testclient.py:41: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    [], typing.ContextManager[anyio.abc.BlockingPortal]
+
+venv\Lib\site-packages\pydantic\_internal\_config.py:272
+  C:\Users\Manikanta\Desktop\landsecure_ai_project_docs\backend\venv\Lib\site-packages\pydantic\_internal\_config.py:272: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.6/migration/
+    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+
+tests/test_api.py::test_health
+  C:\Users\Manikanta\Desktop\landsecure_ai_project_docs\backend\venv\Lib\site-packages\httpx\_client.py:680: DeprecationWarning: The 'app' shortcut is now deprecated. Use the explicit style 'transport=WSGITransport(app=...)' instead.
+    warnings.warn(message, DeprecationWarning)
+
+tests/test_api.py::test_register_and_login
+tests/test_api.py::test_ml_status
+tests/test_api.py::test_create_record_permission
+  C:\Users\Manikanta\Desktop\landsecure_ai_project_docs\backend\app\security.py:19: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    expire = datetime.utcnow() + (expires_delta or timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES))
+
+tests/test_api.py::test_ml_predict
+tests/test_api.py::test_create_record_permission
+tests/test_api.py::test_create_and_verify_record
+tests/test_api.py::test_create_and_verify_record
+tests/test_api.py::test_dashboard_stats
+  C:\Users\Manikanta\Desktop\landsecure_ai_project_docs\backend\venv\Lib\site-packages\jose\jwt.py:311: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = timegm(datetime.utcnow().utctimetuple())
+
+tests/test_api.py::test_create_and_verify_record
+  C:\Users\Manikanta\Desktop\landsecure_ai_project_docs\backend\app\services\record_service.py:30: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    now = datetime.utcnow().isoformat()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+8 passed, 13 warnings in 8.73s

@@ -1,0 +1,99 @@
+{
+  "info": {
+    "name": "LandSecure AI",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": { "method": "GET", "header": [], "url": "{{baseUrl}}/health" }
+    },
+    {
+      "name": "Register",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"email\": \"officer@example.com\",\n  \"password\": \"password123\",\n  \"full_name\": \"Officer One\",\n  \"role\": \"land_officer\"\n}" },
+        "url": "{{baseUrl}}/auth/register"
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"email\": \"officer@example.com\",\n  \"password\": \"password123\"\n}" },
+        "url": "{{baseUrl}}/auth/login"
+      }
+    },
+    {
+      "name": "Me",
+      "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/auth/me" }
+    },
+    {
+      "name": "List Records",
+      "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/records?limit=20" }
+    },
+    {
+      "name": "Create Record",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"survey_number\": \"SV-POST\",\n  \"property_location\": \"Postman Plot\",\n  \"district\": \"Anantapur\",\n  \"state\": \"Andhra Pradesh\",\n  \"area\": 1200,\n  \"unit\": \"sqft\",\n  \"owner_name\": \"Postman Owner\",\n  \"registration_date\": \"2025-01-01\",\n  \"status\": \"active\"\n}" },
+        "url": "{{baseUrl}}/records"
+      }
+    },
+    {
+      "name": "Get Record",
+      "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/records/{{recordId}}" }
+    },
+    {
+      "name": "Verify Record",
+      "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/records/{{recordId}}/verify" }
+    },
+    {
+      "name": "ML Predict",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"failed_login_count\": 8,\n  \"requests_per_minute\": 50,\n  \"access_outside_normal_hours\": 1,\n  \"permission_mismatch\": 1,\n  \"records_modified_short_period\": 6,\n  \"repeated_requests_same_source\": 10,\n  \"hash_mismatch\": 1,\n  \"auth_result\": 0\n}" },
+        "url": "{{baseUrl}}/ml/predict"
+      }
+    },
+    {
+      "name": "Log Activity",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"event_type\": \"login_failed\",\n  \"metadata\": { \"simulated\": true }\n}" },
+        "url": "{{baseUrl}}/activity/log"
+      }
+    },
+    {
+      "name": "List Alerts",
+      "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/alerts" }
+    },
+    {
+      "name": "Blockchain Register",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"record_id\": \"{{recordId}}\"\n}" },
+        "url": "{{baseUrl}}/blockchain/register"
+      }
+    },
+    {
+      "name": "Blockchain Verify",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }, { "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"record_id\": \"{{recordId}}\"\n}" },
+        "url": "{{baseUrl}}/blockchain/verify"
+      }
+    },
+    {
+      "name": "Dashboard Stats",
+      "request": { "method": "GET", "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }], "url": "{{baseUrl}}/dashboard/stats" }
+    }
+  ]
+}

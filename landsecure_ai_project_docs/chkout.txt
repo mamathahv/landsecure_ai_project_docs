@@ -1,0 +1,3 @@
+starting
+web3 OK 8.0.0
+DONE

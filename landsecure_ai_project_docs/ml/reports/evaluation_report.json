@@ -1,0 +1,48 @@
+{
+  "features": [
+    "failed_login_count",
+    "requests_per_minute",
+    "access_outside_normal_hours",
+    "permission_mismatch",
+    "records_modified_short_period",
+    "repeated_requests_same_source",
+    "hash_mismatch",
+    "auth_result"
+  ],
+  "random_forest": {
+    "model": "RandomForest",
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        300,
+        0
+      ],
+      [
+        0,
+        100
+      ]
+    ]
+  },
+  "knn": {
+    "model": "KNN",
+    "accuracy": 0.9975,
+    "precision": 1.0,
+    "recall": 0.99,
+    "f1": 0.995,
+    "roc_auc": 1.0,
+    "confusion_matrix": [
+      [
+        300,
+        0
+      ],
+      [
+        1,
+        99
+      ]
+    ]
+  }
+}

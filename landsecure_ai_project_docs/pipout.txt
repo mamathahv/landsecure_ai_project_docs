@@ -1,0 +1,17 @@
+Collecting pandas
+  Obtaining dependency information for pandas from https://files.pythonhosted.org/packages/10/72/06aefff8fe5efc5e1ca8bfb2695b648a435358f6dc224d4e40159314181a/pandas-3.1.0-cp312-cp312-win_amd64.whl.metadata
+  Downloading pandas-3.1.0-cp312-cp312-win_amd64.whl.metadata (18 kB)
+Requirement already satisfied: numpy>=2.0.2 in c:\users\manikanta\desktop\landsecure_ai_project_docs\backend\venv\lib\site-packages (from pandas) (2.5.4)
+Collecting python-dateutil>=2.9.0 (from pandas)
+  Obtaining dependency information for python-dateutil>=2.9.0 from https://files.pythonhosted.org/packages/5a/17/cebee01d1c0c1441174cf0456ddc91b280d79acb65340c05e41d77866ee8/python_dateutil-3.0.0-py2.py3-none-any.whl.metadata
+  Downloading python_dateutil-3.0.0-py2.py3-none-any.whl.metadata (8.2 kB)
+Collecting tzdata (from pandas)
+  Obtaining dependency information for tzdata from https://files.pythonhosted.org/packages/94/21/1e5995a1c920cce14e4bffae20c665ec10e7ed03ab25e006cd741092b718/tzdata-2026.5-py2.py3-none-any.whl.metadata
+  Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: six>=1.6 in c:\users\manikanta\desktop\landsecure_ai_project_docs\backend\venv\lib\site-packages (from python-dateutil>=2.9.0->pandas) (1.17.0)
+Downloading pandas-3.1.0-cp312-cp312-win_amd64.whl (10.7 MB)
+   ---------------------------------------- 10.7/10.7 MB 7.7 MB/s eta 0:00:00
+Using cached python_dateutil-3.0.0-py2.py3-none-any.whl (94 kB)
+Using cached tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+Installing collected packages: tzdata, python-dateutil, pandas
+Successfully installed pandas-3.1.0 python-dateutil-3.0.0 tzdata-2026.5
